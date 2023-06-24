@@ -5,11 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-peppinos = Restaurant.create(name: 'peppinos ', address: 'westlands, Nairobi')
-javahouse = Restaurant.create(name: 'ParkInn', address: 'Parklands, UpperHill')
 
+# Create restaurants
+sottocasa = Restaurant.create(name: 'Sottocasa NYC', address: '298 Atlantic Ave, Brooklyn, NY 11201')
+pizzarte = Restaurant.create(name: 'PizzArte', address: '69 W 55th St, New York, NY 10019')
+
+# Create pizzas
 cheese_pizza = Pizza.create(name: 'Cheese', ingredients: 'Dough, Tomato Sauce, Cheese')
-chicken_pizza = Pizza.create(name: 'chicken', ingredients: 'Dough, Tomato Sauce, Cheese, chicken, Pepperoni')
+pepperoni_pizza = Pizza.create(name: 'Pepperoni', ingredients: 'Dough, Tomato Sauce, Cheese, Pepperoni')
 
-RestaurantPizza.create(restaurant: peppinos, pizza: cheese_pizza, price: 10)
-RestaurantPizza.create(restaurant: javahouse, pizza: chicken_pizza, price: 12)
+# Create restaurant_pizzas
+RestaurantPizza.create(restaurant: sottocasa, pizza: cheese_pizza, price: 10)
+RestaurantPizza.create(restaurant: sottocasa, pizza: pepperoni_pizza, price: 12)
+RestaurantPizza.create(restaurant: pizzarte, pizza: cheese_pizza, price: 15)
